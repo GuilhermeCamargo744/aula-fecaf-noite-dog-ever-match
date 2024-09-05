@@ -1,4 +1,5 @@
 import { ButtonCustom } from "@/src/components/buttonCustom"
+import { router } from "expo-router"
 import { Text, View } from "react-native"
 
 
@@ -13,7 +14,7 @@ export const InputScreen = () => {
             <Text>Olá mundo</Text>
             <ButtonCustom title="Cadastrar"/>
             <ButtonCustom 
-                onPress={handlePressButtonEntrar}
+                onPress={() => router.navigate("/auth/login")}
                 title={"Entrar"} 
                 styleContainer={{
                     backgroundColor: "#FFC42D"
