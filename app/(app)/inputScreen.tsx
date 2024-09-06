@@ -5,7 +5,11 @@ import { Stack } from "expo-router";
 export default function InputScreenApp () {
     return(
         <>
-            <Stack.Screen/>
+            <Stack.Screen
+                options={{
+                    headerShown: false
+                }}
+            />
             <InputScreen/>
         </>
     )

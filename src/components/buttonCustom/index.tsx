@@ -15,10 +15,8 @@ export const ButtonCustom = ({
     onPress
 }: IProps) => {
     return(
-        <View>
             <TouchableOpacity onPress={onPress} style={[styles.container, styleContainer]}>
                     <Text style={[styleText, styles.title]}>{title}</Text>
             </TouchableOpacity>
-        </View>
     )
 }
