@@ -12,7 +12,7 @@ export const LoginScreen = () => {
                flex: 1,
                paddingLeft: 24,
                paddingRight: 24,
-               alignItems: "center"
+               alignItems: "center",
             }}
         >
            <Text>

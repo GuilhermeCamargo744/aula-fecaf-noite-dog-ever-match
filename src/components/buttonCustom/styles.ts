@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
         elevation: 5,
         shadowColor: "#000",
         shadowOpacity: 0.25,
-        shadowRadius: 3.84
+        shadowRadius: 3.84,
+        borderRadius: 8
     },
     title: {
         fontSize: 24,
