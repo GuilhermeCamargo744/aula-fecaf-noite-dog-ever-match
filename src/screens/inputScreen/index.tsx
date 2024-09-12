@@ -2,37 +2,28 @@ import { ButtonCustom } from "@/src/components/buttonCustom"
 import { router } from "expo-router"
 import { Platform, Text, View } from "react-native"
 import LottieView from 'lottie-react-native';
+import { styles } from "./styles";
 
 
 
 export const InputScreen = () => {
 
-        const handlePressButtonEntrar = () => {
+    const handlePressButtonEntrar = () => {
 
-        }
+    }
 
     return (
         <View
-            style={{
-                justifyContent: "center",
-                alignItems: "center",
-                flex: 1,
-                backgroundColor: "#fff",
-               paddingHorizontal: 24
-            }}
+            style={styles.container}
         >
-            <Text>DogEverMatch</Text>
+            <Text style={styles.styleTitle}>
+                DogEverMatch
+            </Text>
             {
                 Platform.OS != "web" && 
                 <LottieView
                     autoPlay
-                        style={{
-                        width: 250,
-                        height: 250,
-                        backgroundColor: '#eee',
-                        marginBottom: 25,
-
-                    }}
+                    style={styles.styleAnimation}
                     source={require('../../lottie/animated-dog.json')}
                 />
             }
