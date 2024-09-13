@@ -9,8 +9,8 @@ import { useState } from "react"
 
 export const LoginScreen = () => {
     const [valueEmail, setValueEmail] = useState('')
+    const [valuePassword, setValuePassword] = useState('')
 
-    console.log('valueEmail', valueEmail)
 
     return(
         <View
@@ -26,7 +26,7 @@ export const LoginScreen = () => {
 
             <InputCustom
                 title="Senha"
-                onChangeText={setValueEmail}
+                onChangeText={setValuePassword}
             /> 
             <ButtonCustom
                 title="Entrar"

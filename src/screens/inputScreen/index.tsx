@@ -28,7 +28,10 @@ export const InputScreen = () => {
                 />
             }
             
-            <ButtonCustom title="Cadastrar"/>
+            <ButtonCustom 
+                title="Cadastrar" 
+                onPress={() => router.navigate("/auth/register")} 
+            />
             <ButtonCustom 
                 onPress={() => router.navigate("/auth/login")}
                 title={"Entrar"} 

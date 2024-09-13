@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
 
     },
     styleContainer: {
-        width: "100%"
+        width: "100%",
+        marginTop: 12
     }
 })
