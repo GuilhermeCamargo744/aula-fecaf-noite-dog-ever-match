@@ -14,34 +14,33 @@ export const RegisterScreen = () => {
 
     return(
       <View style={styles.container}>
-      <ScrollView>
-          <Text>DogEverMatch</Text> 
-          <View style={styles.contentInputs}>
-            <InputCustom
-                  title="Nome:"
-                  onChangeText={setValueName}
-              /> 
-              <InputCustom
-                  title="E-mail:"
-                  onChangeText={setValueEmail}
-              /> 
-              <InputCustom
-                  title="Senha:"
-                  onChangeText={setValuePassword}
-              /> 
-              <InputCustom
-                  title="Confirmar senha:"
-                  onChangeText={setValueConfirmPassword}
-              /> 
-          </View> 
-      </ScrollView>
-      <ButtonCustom
-          onPress={() =>{}}
-          title="Cadastrar"
-           styleContainer={{
-            position: "absolute",
-            bottom: 36
-           }}
+          <Text style={styles.styleTitle}>DogEverMatch</Text> 
+          <ScrollView style={styles.contentInputs}>
+                <InputCustom
+                      title="Nome:"
+                      onChangeText={setValueName}
+                  /> 
+                  <InputCustom
+                      title="E-mail:"
+                      onChangeText={setValueEmail}
+                  /> 
+                  <InputCustom
+                      title="Senha:"
+                      onChangeText={setValuePassword}
+                  /> 
+                  <InputCustom
+                      title="Confirmar senha:"
+                      onChangeText={setValueConfirmPassword}
+                  /> 
+          </ScrollView>
+        <ButtonCustom
+            onPress={() =>{}}
+            title="Cadastrar"
+            styleContainer={{
+                position: "absolute",
+                bottom: 36,
+                width: "90%"
+            }}
         />
       </View>
 
