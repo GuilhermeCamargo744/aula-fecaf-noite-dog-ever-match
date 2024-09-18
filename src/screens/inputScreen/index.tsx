@@ -8,10 +8,6 @@ import { styles } from "./styles";
 
 export const InputScreen = () => {
 
-    const handlePressButtonEntrar = () => {
-
-    }
-
     return (
         <View
             style={styles.container}
