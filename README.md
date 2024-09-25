@@ -1,7 +1,6 @@
 # aula-fecaf-noite-dog-ever-match
 
 <h1>Como clonar o projeto da nossa aula e rodar ele: </h1> 
-
 <h3>
   // Comando para clonar o repositório do git: 
 </h3>
@@ -12,7 +11,6 @@
 <h3>
   //Comando para acessar a pasta:
 </h3>
-
 <p>
   cd aula-fecaf-noite-dog-ever-match
 </p>
