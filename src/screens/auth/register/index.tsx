@@ -3,6 +3,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView, ScrollView, Text, View } from "react-native";
 import { styles } from "./styles";
 import { ButtonCustom } from "@/src/components/buttonCustom";
+import { colors } from "@/src/utils/colors";
 
 export const RegisterScreen = () => {
   const [valueName, setValueName] = useState("");
@@ -30,9 +31,12 @@ export const RegisterScreen = () => {
           onPress={() => {}}
           title="Cadastrar"
           styleContainer={{
+            backgroundColor: colors.PRIMARY,
             position: "absolute",
             bottom: 32,
-            width: "90%",
+          }}
+          styleText={{
+            color: colors.WHITE,
           }}
         />
       </View>
