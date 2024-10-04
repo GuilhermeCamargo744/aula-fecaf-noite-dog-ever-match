@@ -4,10 +4,22 @@ import { colors } from "@/src/utils/colors";
 import { Text, View } from "react-native";
 import { styles } from "./styles";
 import { useState } from "react";
+import { loginApi } from "@/src/server/config";
 
 export const LoginScreen = () => {
   const [valueEmail, setValueEmail] = useState("");
   const [valuePassword, setValuePassword] = useState("");
+
+  const handleLogin = () => {
+    const payload = {
+      email: valueEmail,
+      password: valuePassword,
+    };
+
+    loginApi(payload).then((response) => {
+      console.log("response", response);
+    });
+  };
 
   return (
     <View style={styles.container}>
@@ -25,6 +37,7 @@ export const LoginScreen = () => {
         styleText={{
           color: colors.WHITE,
         }}
+        onPress={handleLogin}
       />
     </View>
   );
