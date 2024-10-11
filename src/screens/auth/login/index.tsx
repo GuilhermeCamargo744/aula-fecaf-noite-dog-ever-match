@@ -1,10 +1,11 @@
 import { ButtonCustom } from "@/src/components/buttonCustom";
 import { InputCustom } from "@/src/components/inputCustom";
 import { colors } from "@/src/utils/colors";
-import { Text, View } from "react-native";
+import { Alert, Text, View } from "react-native";
 import { styles } from "./styles";
 import { useState } from "react";
 import { loginApi } from "@/src/server/config";
+import { getToken, storageToken } from "@/src/utils/asyncStorage/loginStorage";
 
 export const LoginScreen = () => {
   const [valueEmail, setValueEmail] = useState("");
@@ -18,8 +19,19 @@ export const LoginScreen = () => {
 
     loginApi(payload).then((response) => {
       console.log("response", response);
+      if (response?.data?.token) {
+        storageToken(response.data.token);
+      } else {
+        Alert.alert("Tente novamente", "Houve um erro interno");
+      }
     });
   };
+
+  const value = async () => {
+    return await getToken();
+  };
+
+  console.log("TOKEEEEEnnn", value);
 
   return (
     <View style={styles.container}>
