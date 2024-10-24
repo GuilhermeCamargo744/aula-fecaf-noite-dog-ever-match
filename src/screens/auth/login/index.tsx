@@ -27,12 +27,6 @@ export const LoginScreen = () => {
     });
   };
 
-  const value = async () => {
-    return await getToken();
-  };
-
-  console.log("TOKEEEEEnnn", value);
-
   return (
     <View style={styles.container}>
       <Text style={styles.styleTitle}>DogEverMatch</Text>
