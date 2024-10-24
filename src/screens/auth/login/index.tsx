@@ -6,6 +6,8 @@ import { styles } from "./styles";
 import { useState } from "react";
 import { loginApi } from "@/src/server/config";
 import { getToken, storageToken } from "@/src/utils/asyncStorage/loginStorage";
+import { router } from "expo-router";
+import { AxiosResponse } from "axios";
 
 export const LoginScreen = () => {
   const [valueEmail, setValueEmail] = useState("");
@@ -19,8 +21,9 @@ export const LoginScreen = () => {
 
     loginApi(payload).then((response) => {
       console.log("response", response);
-      if (response?.data?.token) {
+      if (response.status == 200) {
         storageToken(response.data.token);
+        router.navigate("/home");
       } else {
         Alert.alert("Tente novamente", "Houve um erro interno");
       }
